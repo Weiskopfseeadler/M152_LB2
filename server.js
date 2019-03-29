@@ -22,7 +22,6 @@ var upload = multer({ storage: storage });
 app.use("/files", express.static(__dirname + "/files"));
 app.set('view engine', 'ejs');
 app.use("/files", express.static(__dirname + "/files"));
-
 app.post('/api/file', upload.single('file'), function (req, res, next) {
     gm('not_processed_files/' + req.file.filename)
         .resize(720, null).noProfile()
@@ -88,10 +87,5 @@ app.get('/gallery/image', function (req, res) { return res.render('./galery.ejs'
 app.get('/', function (req, res) {
     res.render("index");
 });
-// filename = image-gallery.html
-//
-// // Siehe NPMJS Repo
-// str  Gerendertes File vom Server.
-// res.send(str);
 app.listen(process.env.PORT || 80, function () { return console.log("Server started on port " + process.env.PORT); });
 //# sourceMappingURL=server.js.map
