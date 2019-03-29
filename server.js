@@ -87,5 +87,8 @@ app.get('/gallery/image', function (req, res) { return res.render('./galery.ejs'
 app.get('/', function (req, res) {
     res.render("index");
 });
+app.get('*', function (req, res) {
+    res.render("index");
+});
 app.listen(process.env.PORT || 80, function () { return console.log("Server started on port " + process.env.PORT); });
 //# sourceMappingURL=server.js.map

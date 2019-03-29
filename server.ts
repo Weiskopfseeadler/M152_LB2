@@ -85,4 +85,9 @@ app.get('/', function (req: express.Request, res: express.Response) {
     res.render("index");
 });
 
+app.get('*', function (req: express.Request, res: express.Response) {
+    res.render("index");
+});
+
+
 app.listen(process.env.PORT || 80, () => console.log(`Server started on port ` + process.env.PORT));
