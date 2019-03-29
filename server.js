@@ -22,6 +22,7 @@ var upload = multer({ storage: storage });
 app.use("/files", express.static(__dirname + "/files"));
 app.set('view engine', 'ejs');
 app.use("/files", express.static(__dirname + "/files"));
+
 app.post('/api/file', upload.single('file'), function (req, res, next) {
     gm('not_processed_files/' + req.file.filename)
         .resize(720, null).noProfile()
@@ -49,7 +50,7 @@ app.post('/api/file', upload.single('file'), function (req, res, next) {
         else
             console.log(err);
     });
-    res.status(200).send("ok");
+    res.redirect("/");
 });
 app.post('/api/files', upload.array('files'), function (req, res, next) {
     for (var i = 0; i < req.files.length; i++) {
@@ -80,7 +81,7 @@ app.post('/api/files', upload.array('files'), function (req, res, next) {
                 console.log(err);
         });
     }
-    res.status(200).send("ok");
+    res.redirect("/");
 });
 app.get('/gallery/image', function (req, res) { return res.render('./galery.ejs', { data: getPics() }); });
 //

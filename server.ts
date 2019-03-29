@@ -47,7 +47,7 @@ app.post('/api/file', upload.single('file'), function (req, res, next) {
     gm('not_processed_files/' + req.file.filename).resize(null, null).noProfile().write(__dirname + "/files/" + "ori_" + req.file.originalname, function (err) {
         if (!err) console.log('done'); else console.log(err);
     });
-    res.status(200).send("ok");
+    res.redirect("/");
 });
 
 app.post('/api/files', upload.array('files'), function (req, res, next) {
@@ -73,7 +73,8 @@ app.post('/api/files', upload.array('files'), function (req, res, next) {
         });
     }
 
-    res.status(200).send("ok");
+    res.redirect("/");
+
 });
 
 app.get('/gallery/image', (req, res) => res.render('./galery.ejs', { data: getPics() }));
