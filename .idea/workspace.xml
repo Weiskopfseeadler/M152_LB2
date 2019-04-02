@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7a6e8bc-1ab4-48eb-bbd3-5a26875a037b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/css/player.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/player.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/server.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/player.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/player.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/server.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
-              <caret line="98" column="36" lean-forward="true" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
+              <caret line="98" column="36" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -257,7 +252,7 @@
       <workItem from="1553844908080" duration="10640000" />
       <workItem from="1553951641400" duration="7743000" />
       <workItem from="1554104293427" duration="12287000" />
-      <workItem from="1554191475759" duration="6373000" />
+      <workItem from="1554191475759" duration="7036000" />
     </task>
     <task id="LOCAL-00001" summary="...">
       <created>1553845792012</created>
@@ -277,7 +272,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63054000" />
+    <option name="totallyTimeSpent" value="63717000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -290,9 +285,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="959" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21127503" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21127503" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -307,7 +301,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.3292978" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5009914" side_tool="true" weight="0.3366174" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4990086" visible="true" weight="0.19612591" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4990086" visible="true" weight="0.19612591" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -464,7 +458,7 @@
     <entry file="file://$PROJECT_DIR$/server.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="98" column="36" lean-forward="true" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
+          <caret line="98" column="36" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
         </state>
       </provider>
     </entry>
