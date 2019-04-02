@@ -102,7 +102,7 @@ app.post('/api/videos', uploadVideo.array('videos'), function (req, res, next) {
         command = command.format("mp4").addInput("./in_work_videos/" + req.files[i].filename);
     }
     console.log(req.body);
-    command.mergeToFile("./videos/" + req.body.name + "." + req.body.type, './tmp/')
+    command.mergeToFile("./videos/" + req.body.name + ".mp4", './tmp/')
         .on('error', function (err) {
         console.log('Error ' + err.message);
     })

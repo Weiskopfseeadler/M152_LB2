@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7a6e8bc-1ab4-48eb-bbd3-5a26875a037b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/player.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/player.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/player.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/video_manager1.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/filessm_undefined" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/player.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/player.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/server.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/galery.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/galery.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/upload.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/player.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/player.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,8 +23,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="98" column="37" selection-start-line="98" selection-start-column="37" selection-end-line="98" selection-end-column="37" />
+            <state relative-caret-position="160">
+              <caret line="98" column="36" lean-forward="true" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -40,7 +41,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
+            <state relative-caret-position="497">
               <caret line="48" selection-start-line="48" selection-end-line="49" selection-end-column="7" />
             </state>
           </provider>
@@ -59,16 +60,7 @@
         <entry file="file://$PROJECT_DIR$/views/player.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="23" column="82" selection-start-line="23" selection-start-column="82" selection-end-line="23" selection-end-column="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/player.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -76,8 +68,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/player.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state relative-caret-position="170">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/video_manager1.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="605">
+              <caret line="50" column="94" selection-start-line="50" selection-start-column="94" selection-end-line="50" selection-end-column="94" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/player.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="109" selection-start-line="109" selection-end-line="109" />
             </state>
           </provider>
         </entry>
@@ -100,6 +110,7 @@
       <find>ok</find>
       <find>ejs</find>
       <find>express.st</find>
+      <find>font</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -122,10 +133,10 @@
         <option value="$PROJECT_DIR$/views/galery.ejs" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/views/player.js" />
-        <option value="$PROJECT_DIR$/css/player.css" />
+        <option value="$PROJECT_DIR$/server.ts" />
         <option value="$PROJECT_DIR$/scripts/player.js" />
         <option value="$PROJECT_DIR$/views/player.ejs" />
-        <option value="$PROJECT_DIR$/server.ts" />
+        <option value="$PROJECT_DIR$/css/player.css" />
       </list>
     </option>
   </component>
@@ -147,12 +158,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="M152-LB1_2" type="b2602c69:ProjectViewProjectNode" />
               <item name="M152-LB1_2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="M152-LB1_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M152-LB1_2" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="M152-LB1_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="M152-LB1_2" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="M152-LB1_2" type="b2602c69:ProjectViewProjectNode" />
@@ -168,7 +190,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -236,6 +257,7 @@
       <workItem from="1553844908080" duration="10640000" />
       <workItem from="1553951641400" duration="7743000" />
       <workItem from="1554104293427" duration="12287000" />
+      <workItem from="1554191475759" duration="6373000" />
     </task>
     <task id="LOCAL-00001" summary="...">
       <created>1553845792012</created>
@@ -244,11 +266,18 @@
       <option name="project" value="LOCAL" />
       <updated>1553845792012</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="..._ _ _...">
+      <created>1554191585911</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554191585911</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56681000" />
+    <option name="totallyTimeSpent" value="63054000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -260,9 +289,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="761" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="959" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21150033" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21127503" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -277,7 +307,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.3292978" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5009914" side_tool="true" weight="0.3366174" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4990086" weight="0.19713831" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4990086" visible="true" weight="0.19612591" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -318,7 +348,8 @@
       <path value="$PROJECT_DIR$/m152-lb1pfg" />
     </ignored-roots>
     <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="..._ _ _..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..._ _ _..." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/gitignore" />
@@ -360,13 +391,6 @@
     <entry file="file://$PROJECT_DIR$/files/sm_39908 (1).jpg" />
     <entry file="file://$PROJECT_DIR$/files/sm_69891561-magic-wallpapers[2].jpg" />
     <entry file="file://$PROJECT_DIR$/files/sm_d60fa8eb80aeb956d8fb618b3eeb5186[1].jpg" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -388,16 +412,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/video_manager1.ejs">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="94" lean-forward="true" selection-start-line="50" selection-start-column="94" selection-end-line="50" selection-end-column="94" />
+        <state relative-caret-position="442">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
+        <state relative-caret-position="497">
           <caret line="48" selection-start-line="48" selection-end-line="49" selection-end-column="7" />
         </state>
       </provider>
@@ -409,31 +433,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/player.css">
+    <entry file="file://$PROJECT_DIR$/scripts/player.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state relative-caret-position="344">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/player.js">
+    <entry file="file://$PROJECT_DIR$/views/video_manager1.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+        <state relative-caret-position="605">
+          <caret line="50" column="94" selection-start-line="50" selection-start-column="94" selection-end-line="50" selection-end-column="94" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/player.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="23" column="82" selection-start-line="23" selection-start-column="82" selection-end-line="23" selection-end-column="82" />
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/player.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="98" column="37" selection-start-line="98" selection-start-column="37" selection-end-line="98" selection-end-column="37" />
+        <state relative-caret-position="160">
+          <caret line="98" column="36" lean-forward="true" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
         </state>
       </provider>
     </entry>

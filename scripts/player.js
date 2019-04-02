@@ -40,7 +40,7 @@ function setSpeed(){
 }
 
 window.onload = function () {
-    console.log("asasasas")
+
     const video = document.getElementById("video");
     const playButton = document.getElementById("playButton");
     const muteButton = document.getElementById("muteButton");
@@ -57,4 +57,64 @@ window.onload = function () {
     // fullscreenButton.innerText= "<- ->";
 
 
-}
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    const player = document.querySelector('.player');
+    const progress = player.querySelector('.progress');
+    const progressBar = player.querySelector('.progress__filled');
+    const ranges = player.querySelectorAll('.player__slider');
+
+
+
+    function spaceBarTogglePlay(e) {
+        if (e.keyCode == 32) {
+            togglePlay();
+        }
+    }
+
+
+
+
+
+    function handleRangeUpdate() {
+        const sliderValue = this.value;
+        this.setAttribute('title', sliderValue);
+        video[this.name] = sliderValue;
+        console.log(this.event);
+    }
+
+    function handleProgress() {
+        const percent = (video.currentTime / video.duration) * 100;
+        progressBar.style.flexBasis = `${percent}%`;
+    }
+
+    function scrub(e) {
+        const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+        video.currentTime = scrubTime;
+    }
+
+
+
+// event listeners
+
+    video.addEventListener('timeupdate', handleProgress);
+
+
+
+
+    document.addEventListener('keypress', spaceBarTogglePlay);
+
+    ranges.forEach(range => range.addEventListener('change', handleRangeUpdate));
+    ranges.forEach(range => range.addEventListener('mousemove', handleRangeUpdate));
+
+    let mousedown = false;
+    progress.addEventListener('click', scrub);
+    progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
+    progress.addEventListener('mousedown', () => mousedown = true);
+    progress.addEventListener('mouseup', () => mousedown = false);}
