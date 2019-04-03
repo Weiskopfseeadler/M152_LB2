@@ -30,12 +30,29 @@ const storageVideo = multer.diskStorage({
         cb(null, file.originalname)
     }
 });
+const storageAudio = multer.diskStorage({
+    destination: __dirname + "/audio/",
+    // @ts-ignore
+    filename: function (req, file, cb) {
+        cb(null, file.originalname)
+    }
+});
+const storageVtt = multer.diskStorage({
+    destination: __dirname + "/vtt/",
+    // @ts-ignore
+    filename: function (req, file, cb) {
+        cb(null, file.originalname)
+    }
+});
 const uploadFile = multer({storage: storageFile});
 const uploadVideo = multer({storage: storageVideo});
+const uploadAudio = multer({storage: storageAudio});
+const uploadVtt = multer({storage: storageVtt});
 
-app.use("/files", express.static(__dirname + "/files"));
 app.set('view engine', 'ejs');
+app.use("/files", express.static(__dirname + "/files"));
 app.use("/videos", express.static(__dirname + "/videos"));
+app.use("/audio", express.static(__dirname + "/audio"));
 app.use("/files", express.static(__dirname + "/files"));
 app.use("/scripts",express.static(__dirname+"/scripts"));
 app.use("/css",express.static(__dirname+"/css"))
@@ -87,8 +104,11 @@ app.post('/api/files', uploadFile.array('files'), function (req, res, next) {
     res.redirect("/");
 
 });
+app.get('/gallery/image', (req, res) => {
+    res.render('./galery.ejs', {data: getPics()})
 
-// "------------------------------------------------------------------------------------------------------"
+});
+//*********************************************************************************************************************************************************************************************************************************************
 
 app.post('/api/videos', uploadVideo.array('videos'), function (req, res, next) {
 
@@ -100,15 +120,15 @@ app.post('/api/videos', uploadVideo.array('videos'), function (req, res, next) {
 
     }
     console.log(req.body);
-        command.mergeToFile("./videos/"+req.body.name+".mp4", './tmp/')
-            .on('error', function(err) {
-                console.log('Error ' + err.message);
-            })
-            .on('end', function() {
+    command.mergeToFile("./videos/"+req.body.name+".mp4", './tmp/')
+        .on('error', function(err) {
+            console.log('Error ' + err.message);
+        })
+        .on('end', function() {
 
 
-                console.log('Finished!');            })
-            ;
+            console.log('Finished!');            })
+    ;
 
 
 
@@ -116,20 +136,43 @@ app.post('/api/videos', uploadVideo.array('videos'), function (req, res, next) {
     res.redirect("/video_manager");
 
 });
-
-app.get('/gallery/image', (req, res) => {
-    res.render('./galery.ejs', {data: getPics()})
-
-});
-
 app.get('/video_manager', function (req: express.Request, res: express.Response) {
     res.render("video_manager1");
 });
-//
-app.get('/play_video', function (req: express.Request, res: express.Response) {
+app.get('/video-player' +
+    '', function (req: express.Request, res: express.Response) {
     console.log(req.query.videoName);
-    res.render("player",{data: req.query.videoName});
+    res.render("video-player",{data: req.query.videoName});
 });
+//-------------------------------------------------------------------
+app.post('/api/audio', uploadAudio.array('audio'), function (req, res, next) {
+    fs.rename("./audio/"+req.files[0].filename,"./audio/"+req.body.name+"."+req.files[0].filename.split(".").pop(), function (err) {
+        if (err) throw err;
+
+        });
+    fs.rename("./audio/"+req.files[1].filename,"./vtt/"+req.body.name+".vtt",function (err) {
+    if (err) throw err;
+
+    });
+    res.redirect("audio-manager");
+
+});
+app.get('/audio_manager', function (req: express.Request, res: express.Response) {
+    res.render("audio_manager1");
+});
+
+app.get('/audio-player', function (req: express.Request, res: express.Response) {
+    console.log(req.query.videoName);
+    res.render("audio-player1",{audio: req.query.audioName,vtt: fs.readdirSync('./vtt/').find(vtt => vtt === +req.query.audioName.slice(0,-4)+".vtt")});
+});
+
+// "------------------------------------------------------------------------------------------------------"
+
+
+
+
+//
+
 
 
 

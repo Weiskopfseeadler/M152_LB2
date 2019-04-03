@@ -41,7 +41,8 @@ function setSpeed(){
 
 window.onload = function () {
 
-    const video = document.getElementById("video");
+
+    const output = document.getElementById("output");
     const playButton = document.getElementById("playButton");
     const muteButton = document.getElementById("muteButton");
     const fullscreenButton = document.getElementById("fullscreenButton");
@@ -85,25 +86,25 @@ window.onload = function () {
     function handleRangeUpdate() {
         const sliderValue = this.value;
         this.setAttribute('title', sliderValue);
-        video[this.name] = sliderValue;
+        output[this.name] = sliderValue;
         console.log(this.event);
     }
 
     function handleProgress() {
-        const percent = (video.currentTime / video.duration) * 100;
+        const percent = (output.currentTime / output.duration) * 100;
         progressBar.style.flexBasis = `${percent}%`;
     }
 
     function scrub(e) {
-        const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
-        video.currentTime = scrubTime;
+        const scrubTime = (e.offsetX / progress.offsetWidth) * output.duration;
+        output.currentTime = scrubTime;
     }
 
 
 
 // event listeners
 
-    video.addEventListener('timeupdate', handleProgress);
+    output.addEventListener('timeupdate', handleProgress);
 
 
 
