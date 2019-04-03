@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 // server.ts
 var express = require("express");
 var app = express();
@@ -167,4 +167,3 @@ app.get('*', function (req, res) {
     res.render("index");
 });
 app.listen(process.env.PORT || 80, function () { return console.log("Server started on port " + process.env.PORT); });
-//# sourceMappingURL=server.js.map
