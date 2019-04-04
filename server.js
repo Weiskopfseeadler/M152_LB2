@@ -49,6 +49,7 @@ app.set('view engine', 'ejs');
 app.use("/files", express.static(__dirname + "/files"));
 app.use("/videos", express.static(__dirname + "/videos"));
 app.use("/audio", express.static(__dirname + "/audio"));
+app.use("/vtt", express.static(__dirname + "/vtt"));
 app.use("/files", express.static(__dirname + "/files"));
 app.use("/scripts", express.static(__dirname + "/scripts"));
 app.use("/css", express.static(__dirname + "/css"));
@@ -134,10 +135,10 @@ app.post('/api/videos', uploadVideo.array('videos'), function (req, res, next) {
 app.get('/video_manager', function (req, res) {
     res.render("video_manager1");
 });
-app.get('/video-player' +
+app.get('/video_player' +
     '', function (req, res) {
     console.log(req.query.videoName);
-    res.render("video-player", { data: req.query.videoName });
+    res.render("video_player", { data: req.query.videoName });
 });
 //-------------------------------------------------------------------
 app.post('/api/audio', uploadAudio.array('audio'), function (req, res, next) {
@@ -156,9 +157,9 @@ app.get('/audio_manager', function (req, res) {
 });
 app.get('/audio-player', function (req, res) {
     console.log(req.query.videoName);
-    res.render("audio-player1", { audio: req.query.audioName, vtt: fs.readdirSync('./vtt/').find(function (vtt) { return vtt === +req.query.audioName.slice(0, -4) + ".vtt"; }) });
+    res.render("audio_player", { audio: req.query.audioName.slice(0, -4) });
 });
-// "------------------------------------------------------------------------------------------------------"
+// "------------------------------------------------------------------------------------------------------"audio: req.query.audioName,vtt: fs.readdirSync('./vtt/').find(vtt => vtt === +req.query.audioName.replace(/\.[^/.]+$/,".vtt"))
 //
 app.get('/', function (req, res) {
     res.render("index");

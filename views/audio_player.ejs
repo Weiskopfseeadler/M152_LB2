@@ -5,41 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <script src="../scripts/player.js"></script><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="../scripts/player.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/player.css">
     <title>Node File Uploads</title>
 </head>
+<div style="height: 100px">
 
+</div>
 <body>
 <div class="player">
-<% { %>
-    <audio controls id="output" width="400" src="../audio/<%= audio %>" type="audio/mp4" >
+    <% { %>
 
-        <track  default src="../vtt/<%= audio %>.vtt">
-        Your browser does not support HTML5 video.
-    </audio>
+        <video controls id="output"  src="../audio/<%= audio %>.mp3" type="audio/mp4">
+            <!--<track default src="../vtt/test2.vtt" label="Untertitel"-->
+                   <!--kind="subtitles" default srclang="de">-->
+            <!--&gt;-->
+            <track default src="../vtt/<%= audio %>.vtt" label="Untertitel"
+                   kind="subtitles" default srclang="de">
+            <!--<track default src="../vtt/<%= audio %>.vtt" label="Untertitel"-->
+                   <!--kind="subtitles"  srclang="en">-->
+
+            <!--<track default src="../vtt/<%= audio %>.vtt" label="Untertitel"-->
+                   <!--kind="subtitles"  srclang="">-->
+            Your browser does not support HTML5 video.
+        </video>
 
 
-<!--<% } %>-->
+
+    <!--<% } %>-->
     <!--<div class="player__controls">-->
-        <!--<div class="progress">-->
-            <!--<div class="progress__filled"></div>-->
-        <!--</div>-->
-        <!--<button id="playButton" onclick="startOrStopp()"><i id="playButtonIcon" class="fas fa-play "></i></button>-->
-
-        <!--<button id="muteButton" onclick="mute()"><i id="muteButtonIcon" class="fas fa-volume-up"></i></button>-->
-        <!--<input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1" title="monkey">-->
-        <!--<div></div>-->
-        <!--<select class="speedSelect" id="speedSelect" onchange="setSpeed()" >-->
-            <!--<option value=1>1</option>-->
-            <!--<option value=1.5>1.5</option>-->
-            <!--<option value=2>2</option>-->
-            <!--<option value=0.5>0.5</option>-->
-            <!--<option value=0.25>0.25</option>-->
-        <!--</select>-->
-        <!--<button id="fullscreenButton" onclick="fullscreen()"><i class="fas fa-expand"></i></button>-->
+    <!--<div class="progress">-->
+    <!--<div class="progress__filled"></div>-->
     <!--</div>-->
-<!--</div>-->
+    <!--<button id="playButton" onclick="startOrStopp()"><i id="playButtonIcon" class="fas fa-play "></i></button>-->
+
+    <!--<button id="muteButton" onclick="mute()"><i id="muteButtonIcon" class="fas fa-volume-up"></i></button>-->
+    <!--<input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1" title="monkey">-->
+    <!--<div></div>-->
+    <!--<select class="speedSelect" id="speedSelect" onchange="setSpeed()" >-->
+    <!--<option value=1>1</option>-->
+    <!--<option value=1.5>1.5</option>-->
+    <!--<option value=2>2</option>-->
+    <!--<option value=0.5>0.5</option>-->
+    <!--<option value=0.25>0.25</option>-->
+    <!--</select>-->
+    <!--<button id="fullscreenButton" onclick="fullscreen()"><i class="fas fa-expand"></i></button>-->
+    <!--</div>-->
+    <!--</div>-->
 
 </body>
 </html>
