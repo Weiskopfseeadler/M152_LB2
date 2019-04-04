@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 // server.ts
 var express = require("express");
 var app = express();
@@ -149,7 +149,7 @@ app.post('/api/audio', uploadAudio.array('audio'), function (req, res, next) {
         if (err)
             throw err;
     });
-    res.redirect("audio-manager");
+    res.redirect("/audio_manager");
 });
 app.get('/audio_manager', function (req, res) {
     res.render("audio_manager1");
@@ -167,3 +167,4 @@ app.get('*', function (req, res) {
     res.render("index");
 });
 app.listen(process.env.PORT || 80, function () { return console.log("Server started on port " + process.env.PORT); });
+//# sourceMappingURL=server.js.map

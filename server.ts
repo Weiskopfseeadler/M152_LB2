@@ -156,7 +156,7 @@ app.post('/api/audio', uploadAudio.array('audio'), function (req, res, next) {
     if (err) throw err;
 
     });
-    res.redirect("audio-manager");
+    res.redirect("/audio_manager");
 
 });
 app.get('/audio_manager', function (req: express.Request, res: express.Response) {
