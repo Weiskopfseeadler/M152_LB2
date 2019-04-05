@@ -1,11 +1,11 @@
-try {
-    var chatSocket = new WebSocket("ws://localhost:8999");
 
-}catch (e) {
+    // var chatSocket = new WebSocket("ws://localhost:8999");
+
+
 
         var chatSocket = new WebSocket(" https://m152-lb2.herokuapp.com");
 
-}
+
 var inputName = document.querySelector("#name");
 var inputMessage = document.querySelector("#input");
 var error = document.querySelector("#error");
