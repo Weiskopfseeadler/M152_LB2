@@ -30,17 +30,23 @@ wss.on('connection', function (ws) {
         });
     }, 15000);
     ws.on('message', function (message) {
-        //log the received message and send it back to the client
-        console.log('received: %s', message);
-        //send back the message to the other clients
-        ws.send(" " + message);
-        wss.clients.forEach(function (client) {
-            if (client != ws) {
-                console.log(wss.clients.length);
-                client.send("" + message);
-            }
-            ;
-        });
+        if (JSON.parse(message).user !== "identifyer=?989()") {
+            //log the received message and send it back to the client
+            console.log('received: %s', message);
+            //send back the message to the other clients
+            ws.send(" " + message);
+            wss.clients.forEach(function (client) {
+                if (client != ws) {
+                    console.log(wss.clients.length);
+                    client.send("" + message);
+                }
+                ;
+            });
+        }
+        else {
+            console.log(JSON.parse(message).msg);
+        }
+        ;
     });
     //send immediatly a feedback to the incoming connection
     console.log(wss.clients.length);

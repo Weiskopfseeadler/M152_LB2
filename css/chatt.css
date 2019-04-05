@@ -1,0 +1,19 @@
+body{
+    height: 100vh;
+    
+}
+
+
+.fr-box {
+    position: sticky;
+    bottom: 0;
+}
+.fr-basic  {
+    position: sticky;
+    bottom: 0;
+}
+.fr-top{
+    position: sticky;
+    bottom: 0;
+}
+}

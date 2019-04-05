@@ -11,6 +11,7 @@ var ffmpeg = require('fluent-ffmpeg');
 
 import * as http from 'http';
 import * as WebSocket from 'ws';
+import {json} from "express";
 
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
@@ -44,13 +45,13 @@ wss.on('connection', (ws: WebSocket) => {
 
     ws.on('message', (message: string) => {
 
+        if (JSON.parse(message).user !== "identifyer=?989()" ){
+            //log the received message and send it back to the client
+            console.log('received: %s', message);
+            //send back the message to the other clients
 
-        //log the received message and send it back to the client
-        console.log('received: %s', message);
-        //send back the message to the other clients
-
-        ws.send(` ${message}`)
-        wss.clients.forEach(client => {
+            ws.send(` ${message}`)
+            wss.clients.forEach(client => {
                 if (client != ws) {
                     console.log(wss.clients.length)
                     client.send(`${message}`);
@@ -59,7 +60,13 @@ wss.on('connection', (ws: WebSocket) => {
                 ;
 
 
-            });})
+            })
+        }else{
+            console.log(JSON.parse(message).msg)
+        }
+        ;})
+
+
 
         //send immediatly a feedback to the incoming connection
         console.log(wss.clients.length)
