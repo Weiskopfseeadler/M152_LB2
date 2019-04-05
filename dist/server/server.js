@@ -13,42 +13,6 @@ var http = require("http");
 var WebSocket = require("ws");
 var server = http.createServer(app);
 var wss = new WebSocket.Server({ server: server });
-server.listen(process.env.PORT || 8999, function () {
-    console.log("Server started on port " + server.address().port + " :)");
-});
-wss.on('connection', function (ws) {
-    ws.isAlive = true;
-    ws.on('pong', function () {
-        ws.isAlive = true;
-    });
-    setInterval(function () {
-        wss.clients.forEach(function (ws) {
-            if (!ws.isAlive)
-                return ws.terminate();
-            ws.isAlive = false;
-            ws.ping(null, false, true);
-        });
-    }, 15000);
-    ws.on('message', function (message) {
-        //log the received message and send it back to the client
-        console.log('received: %s', message);
-        //send back the message to the other clients
-        ws.send(" " + message);
-        wss.clients.forEach(function (client) {
-            if (client != ws) {
-                console.log(wss.clients.length);
-                client.send("" + message);
-            }
-            ;
-        });
-    });
-    //send immediatly a feedback to the incoming connection
-    console.log(wss.clients.length);
-    ws.send('Hi there, I am a WebSocket server');
-});
-app.get('/chat', function (req, res) {
-    res.render('./chat.ejs', { data: getPics() });
-});
 function getPics() {
     return fs.readdirSync('./files/');
 }
@@ -156,7 +120,7 @@ app.post('/api/files', uploadFile.array('files'), function (req, res, next) {
 app.get('/gallery/image', function (req, res) {
     res.render('./galery.ejs', { data: getPics() });
 });
-//-----------------------------------------------
+//*********************************************************************************************************************************************************************************************************************************************
 app.post('/api/videos', uploadVideo.array('videos'), function (req, res, next) {
     var command = ffmpeg();
     for (var i = 0; i < req.files.length; i++) {
@@ -206,5 +170,16 @@ app.get('/', function (req, res) {
 app.get('*', function (req, res) {
     res.render("index");
 });
+app.listen(process.env.PORT || 8999, function () { return console.log("Server started on port " + process.env.PORT); });
 //-----------------------------------------------------------------------------------------------------------------------------
+wss.on('connection', function (ws) {
+    //connection is up, let's add a simple simple event
+    ws.on('message', function (message) {
+        //log the received message and send it back to the client
+        console.log('received: %s', message);
+        ws.send("Hello, you sent -> " + message);
+    });
+    //send immediatly a feedback to the incoming connection
+    ws.send('Hi there, I am a WebSocket server');
+});
 //# sourceMappingURL=server.js.map

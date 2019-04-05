@@ -9,7 +9,7 @@ function startOrStopp() {
         playButtonIcon.className = "fas fa-play"
     }
 }
-function test() {
+function text() {
     console.log("asdasdjfhujdshvj");
 }
 
