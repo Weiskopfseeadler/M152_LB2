@@ -3,7 +3,7 @@
 
 
 
-        var chatSocket = new WebSocket(" https://m152-lb2.herokuapp.com");
+        var chatSocket = new WebSocket(" wss://m152-lb2.herokuapp.com");
 
 
 var inputName = document.querySelector("#name");
