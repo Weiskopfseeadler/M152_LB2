@@ -25,6 +25,7 @@ wss.on('connection', (ws: WebSocket) => {
     ws.isAlive = true;
 
 
+
     ws.on('pong', () => {
         ws.isAlive = true;
     });
@@ -62,7 +63,10 @@ wss.on('connection', (ws: WebSocket) => {
 
         //send immediatly a feedback to the incoming connection
         console.log(wss.clients.length)
-        ws.send('Hi there, I am a WebSocket server');
+        var message = {user: "Server", msg: "Server connection established"}
+
+
+        ws.send('Server connection established');
     });
 
 app.get('/chat', (req, res) => {

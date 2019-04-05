@@ -44,7 +44,8 @@ wss.on('connection', function (ws) {
     });
     //send immediatly a feedback to the incoming connection
     console.log(wss.clients.length);
-    ws.send('Hi there, I am a WebSocket server');
+    var message = { user: "Server", msg: "Server connection established" };
+    ws.send('Server connection established');
 });
 app.get('/chat', function (req, res) {
     res.render('./chat.ejs', { data: getPics() });

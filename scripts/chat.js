@@ -1,15 +1,47 @@
-var chatSocket = new WebSocket("ws://localhost:8999");
+try {
+    var chatSocket = new WebSocket("ws://localhost:8999");
 
+}catch (e) {
 
-chatSocket.onopen = function (event) {
-    chatSocket.send("Here's some text that the server is urgently awaiting!");
-};
+        var chatSocket = new WebSocket(" https://m152-lb2.herokuapp.com");
+
+}
 var inputName = document.querySelector("#name");
 var inputMessage = document.querySelector("#input");
+var error = document.querySelector("#error");
+inputName="";
+inputMessage="";
+
+chatSocket.onopen = function (event) {
+
+    var inputName = document.querySelector("#name");
+    var inputMessage = document.querySelector("#input");
+    var message = {user: "NoName", msg: "Hello I'm new her"}
+    chatSocket.send(JSON.stringify(message));
+};
+
+chatSocket.onclose = function (event) {
+    var inputName = document.querySelector("#name");
+    var inputMessage = document.querySelector("#input");
+    var message = {user: inputName.value, msg: "See you later aligater"}
+    chatSocket.send(JSON.stringify(message));
+};
+
+
 
 document.querySelector("#submit").addEventListener('click', function () {
-    var message = {user: inputName.value, msg: inputMessage.value}
-    chatSocket.send(JSON.stringify(message));
+    var inputName = document.querySelector("#name");
+    var inputMessage = document.querySelector("#input");
+    var error = document.querySelector("#error");
+    console.log(inputName.value+inputMessage)
+    if (inputName.value !== ""||inputMessage.value !==""){
+        error.style.display = "none";
+        var message = {user: inputName.value, msg: inputMessage.value}
+        chatSocket.send(JSON.stringify(message));
+    }else{
+        error.style.display = "block";
+    }
+
 });
 
 
